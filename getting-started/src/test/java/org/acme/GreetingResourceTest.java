@@ -11,10 +11,10 @@ class GreetingResourceTest {
     @Test
     void testHelloEndpoint() {
         given()
-          .when().get("/hello")
-          .then()
-             .statusCode(200)
-             .body(is("Hello from Quarkus REST"));
+                .when().get("/hello")
+                .then()
+                .statusCode(200)
+                .body(is("Hello from Quarkus REST"));
     }
 
     @Test
@@ -24,6 +24,16 @@ class GreetingResourceTest {
                 .get("/goodbye")
                 .then()
                 .statusCode(200).body(is("Goodbye quarkus"));
+    }
+
+    @Test
+    void helloUserEndpoint() {
+        given()
+                .when()
+                .get("/hello/Joao")
+                .then()
+                .statusCode(200)
+                .body(is("Hello Joao"));
     }
 
 }
