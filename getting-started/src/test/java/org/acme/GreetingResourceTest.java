@@ -17,4 +17,13 @@ class GreetingResourceTest {
              .body(is("Hello from Quarkus REST"));
     }
 
+    @Test
+    void goodByeEndpoint() {
+        given()
+                .when()
+                .get("/goodbye")
+                .then()
+                .statusCode(200);
+    }
+
 }
