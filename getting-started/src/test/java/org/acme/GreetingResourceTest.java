@@ -23,7 +23,7 @@ class GreetingResourceTest {
                 .when()
                 .get("/goodbye")
                 .then()
-                .statusCode(200);
+                .statusCode(200).body(is("Goodbye quarkus"));
     }
 
 }

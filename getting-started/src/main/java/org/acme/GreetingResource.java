@@ -18,5 +18,5 @@ public class GreetingResource {
     @Path("/goodbye")
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String goodBye() { return "Goodbye"; }
+    public String goodBye() { return "Goodbye quarkus"; }
 }
